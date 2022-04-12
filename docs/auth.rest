@@ -1,0 +1,23 @@
+POST http://127.0.0.1:8000/api/v1/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "miher@mail.com",
+    "password": "miher123456"
+}
+### Registro de usuario
+POST http://127.0.0.1:8000/api/v1/auth/registro
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "mijail herder",
+    "email": "miher@mail.com",
+    "password": "miher123456",
+    "password_confirmation": "miher123456"    
+}
+### Ver Perfil
+GET http://127.0.0.1:8000/api/user
+Accept: application/json
+Authorization: Bearer 9|OXD7o4eM9WKLUexyyRYSB6DOHwYcImLyxWRtPNsJ

@@ -1,0 +1,30 @@
+GET http://127.0.0.1:8000/api/v1/categoria
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+### Guardar registro de categoria
+POST http://127.0.0.1:8000/api/v1/categoria
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "rico y pobre",
+    "detalle": "ricos y ponres"
+}
+
+### Actualizar registros de categorias
+PATCH http://127.0.0.1:8000/api/v1/categoria/2
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "salud,dinero y belleza",
+    "detalle": "se trabaja con el dinero"
+}
+
+### Eiminar categoria
+DELETE http://127.0.0.1:8000/api/v1/categoria/3
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE

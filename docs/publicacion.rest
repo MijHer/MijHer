@@ -1,0 +1,42 @@
+GET http://127.0.0.1:8000/api/v1/publicacion
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+### Guardar registro de publicacion
+POST http://127.0.0.1:8000/api/v1/publicacion
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "titulo": "publicidad",
+    "tipo": "Temporal",
+    "nivel": "junior",
+    "descripcion": "huanuco programador",
+    "requerimientos": "basico laravel",
+    "salario": 2500,
+    "ubicacion": "huanuco",
+    "estado": 1
+}
+
+### Actualizar registros de publicacions
+PATCH http://127.0.0.1:8000/api/v1/publicacion/2
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "titulo": "Diseñador",
+    "tipo": "Medio Tiempo",
+    "nivel": "junior",
+    "descripcion": "huanuco programador",
+    "requerimientos": "basico laravel",
+    "salario": 2500,
+    "ubicacion": "huanuco",
+    "estado": 1
+}
+
+### Eiminar publicacion
+DELETE http://127.0.0.1:8000/api/v1/publicacion/3
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE

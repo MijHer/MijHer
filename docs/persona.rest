@@ -1,0 +1,37 @@
+
+GET http://127.0.0.1:8000/api/v1/persona
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+### Guardar registro de persona
+POST http://127.0.0.1:8000/api/v1/persona
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombres": "mijail ruth",
+    "apellidos": "vargas casa",
+    "ci_nit": "85741608",
+    "tel_cel": "956365589",
+    "direccion": "jr alamos"
+}
+
+### Actualizar registros de personas
+PATCH http://127.0.0.1:8000/api/v1/persona/2
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombres": "maria ruth",
+    "apellidos": "guerra gonzales",
+    "ci_nit": "85741618",
+    "tel_cel": "956315589",
+    "direccion": "jr balamos"
+}
+
+### Eiminar persona
+DELETE http://127.0.0.1:8000/api/v1/persona/1
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE

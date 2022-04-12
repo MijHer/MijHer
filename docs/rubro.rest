@@ -1,0 +1,32 @@
+GET http://127.0.0.1:8000/api/v1/rubro
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+### Guardar registro de rubro
+POST http://127.0.0.1:8000/api/v1/rubro
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "Rubro salud",
+    "detalle": "saludables",
+    "estado": 0
+}
+
+### Actualizar registros de rubros
+PATCH http://127.0.0.1:8000/api/v1/rubro/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "Rubro desarrollo",
+    "detalle": "Desarrolladores",
+    "estado": 1
+}
+
+### Eiminar rubro
+DELETE http://127.0.0.1:8000/api/v1/rubro/2
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE

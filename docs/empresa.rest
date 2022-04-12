@@ -1,0 +1,42 @@
+GET http://127.0.0.1:8000/api/v1/empresa
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+### Guardar registro de empresa
+POST http://127.0.0.1:8000/api/v1/empresa
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "Programacion",
+    "sitio_web": "www.programacion.com" ,
+    "direccion": "jiron desarrollo",
+    "ciudad": "huanuco",
+    "pais": "peru",
+    "descripcion": "se necesita desarrolladores",
+    "telefono": "957845632",
+    "nombre_contacto": "luis miguel"
+}
+
+### Actualizar registros de empresas
+PATCH http://127.0.0.1:8000/api/v1/empresa/2
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
+
+{
+    "nombre": "Programacion y desarrollo",
+    "sitio_web": "www.developer.com" ,
+    "direccion": "jiron desarrollo",
+    "ciudad": "huanuco",
+    "pais": "peru",
+    "descripcion": "se necesita desarrolladores",
+    "telefono": "957845632",
+    "nombre_contacto": "luis miguel"
+}
+
+### Eiminar empresa
+DELETE http://127.0.0.1:8000/api/v1/empresa/1
+Accept: application/json
+Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
