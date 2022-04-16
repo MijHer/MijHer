@@ -30,10 +30,10 @@ Route::post("/v1/auth/registro", [AuthController::class, "registro"]);
 Route::middleware('auth:sanctum')->group( function(){
     Route::get("/v1/auth/perfil", [AuthController::class, "perfil"]);
     Route::post("/v1/auth/logout", [AuthController::class, "salir"]);
-    Route::apiResource("v1/categoria", CategoriaController::class);
     
 });
 
+Route::apiResource("v1/categoria", CategoriaController::class);
 Route::apiResource("v1/empresa", EmpresaController::class);
 Route::apiResource("v1/persona", PersonaController::class);
 Route::apiResource("v1/rubro", RubroController::class);

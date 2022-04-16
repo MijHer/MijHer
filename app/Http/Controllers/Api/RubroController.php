@@ -33,7 +33,6 @@ class RubroController extends Controller
         ]);
 
         $rubro = new Rubro;
-
         $rubro->nombre = $request->nombre;
         $rubro->detalle = $request->detalle;
         $rubro->estado = $request->estado;
@@ -71,14 +70,13 @@ class RubroController extends Controller
     public function update(Request $request, $id)
     {
         $rubro = Rubro::FindOrFail($id);
-
         $rubro->nombre = $request->nombre;
         $rubro->detalle = $request->detalle;
         $rubro->estado = $request->estado;
         $rubro->save();
         return response()->json([
             "status" => 1,
-            "mensaje" => "Rubreo editado",
+            "mensaje" => "Rubro Modificado",
             "error" => false
         ], 200);
     }
