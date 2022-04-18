@@ -9,14 +9,17 @@ Content-Type: application/json
 Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
 
 {
-    "titulo": "publicidad",
+    "titulo": "publicidad 1",
     "tipo": "Temporal",
     "nivel": "junior",
     "descripcion": "huanuco programador",
     "requerimientos": "basico laravel",
     "salario": 2500,
     "ubicacion": "huanuco",
-    "estado": 1
+    "estado": 1,
+    "empresa_id": 1,
+    "categoria_id": 1,
+    "persona_id": 1
 }
 
 ### Actualizar registros de publicacions

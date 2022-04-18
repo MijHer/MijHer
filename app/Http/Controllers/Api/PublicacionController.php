@@ -49,6 +49,9 @@ class PublicacionController extends Controller
         $publicacion->salario = $request->salario;
         $publicacion->ubicacion = $request->ubicacion;
         $publicacion->estado = $request->estado;
+        $publicacion->empresa_id = $request->empresa_id;
+        $publicacion->categoria_id = $request->categoria_id;
+        $publicacion->persona_id = $request->persona_id;
         $publicacion->save();
         return response()->json([
             "status" => 1,
@@ -91,6 +94,9 @@ class PublicacionController extends Controller
         $publicacion->salario = $request->salario;
         $publicacion->ubicacion = $request->ubicacion;
         $publicacion->estado = $request->estado;
+        $publicacion->empresa_id = $request->empresa_id;
+        $publicacion->categoria_id = $request->categoria_id;
+        $publicacion->persona_id = $request->persona_id;
         $publicacion->save();
         return response()->json([
             "status" => 1,
