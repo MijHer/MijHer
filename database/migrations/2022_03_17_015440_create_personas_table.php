@@ -20,13 +20,9 @@ class CreatePersonasTable extends Migration
             $table->string("ci_nit", 15)->nullable();
             $table->string("tel_cel", 15)->nullable();
             $table->string("direccion", 200)->nullable();
+            $table->bigInteger("user_id")->unsigned();
+            $table->foreign("user_id")->references("id")->on("users");
             $table->timestamps();
-        });
-
-        Schema::table('users', function (Blueprint $table){
-            $table->unsignedBigInteger('persona_id')->nullable();
-            $table->foreign('persona_id')->references('id')->on('personas');
-
         });
     }
 

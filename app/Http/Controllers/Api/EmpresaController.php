@@ -33,6 +33,11 @@ class EmpresaController extends Controller
         ]);
 
         $img_logo = "";
+        if ($file = $request->file("logo")) {
+            $img_logo = time(). '-' . $file->getClientOriginalName();
+            $file->move("imagenes", $img_logo);
+            $img_logo = "imagenes/". $img_logo;
+        }
         $empresa = new Empresa;
         $empresa->nombre = $request->nombre;
         $empresa->sitio_web = $request->sitio_web;

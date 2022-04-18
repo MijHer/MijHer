@@ -23,19 +23,13 @@ class CreatePublicacionsTable extends Migration
             $table->decimal('salario', 10, 2);
             $table->string('ubicacion');
             $table->integer('estado')->default(0);
+            $table->bigInteger("empresa_id")->unsigned();
+            $table->foreign("empresa_id")->references("id")->on("empresas");
+            $table->bigInteger("categoria_id")->unsigned();
+            $table->foreign("categoria_id")->references("id")->on("categorias");
+            $table->bigInteger("persona_id")->unsigned();
+            $table->foreign("persona_id")->references("id")->on("personas");
             $table->timestamps();
-        });
-        Schema::table('empresas', function (Blueprint $table){
-            $table->unsignedBigInteger('publicacion_id')->nullable();
-            $table->foreign('publicacion_id')->references('id')->on('publicacions');
-        });
-        Schema::table('categorias', function (Blueprint $table){
-            $table->unsignedBigInteger('publicacion_id')->nullable();
-            $table->foreign('publicacion_id')->references('id')->on('publicacions');
-        });
-        Schema::table('personas', function (Blueprint $table){
-            $table->unsignedBigInteger('publicacion_id')->nullable();
-            $table->foreign('publicacion_id')->references('id')->on('publicacions');
         });
     }
 
@@ -46,10 +40,6 @@ class CreatePublicacionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('empresa', function (Blueprint $table) {
-            $table->dropForeign('empresa_publicacion_id_foreign');
-            $table->dropColumn('publicacion_id');
-        });
         Schema::dropIfExists('publicacions');
     }
 }

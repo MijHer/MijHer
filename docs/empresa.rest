@@ -9,7 +9,7 @@ Content-Type: application/json
 Authorization: Bearer 10|gvLYnGFYDJu5qCKzbKo4bc6lDGG0rlIwKJno69tE
 
 {
-    "nombre": "Programacion",
+    "nombre": "Programacionws",
     "sitio_web": "www.programacion.com" ,
     "direccion": "jiron desarrollo",
     "ciudad": "huanuco",
