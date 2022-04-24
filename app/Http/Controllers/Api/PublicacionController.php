@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Publicacion;
+use App\Models\Categoria;
+use App\Models\Empresa;
+use App\Models\Persona;
 use Illuminate\Http\Request;
 
 class PublicacionController extends Controller
@@ -15,7 +18,7 @@ class PublicacionController extends Controller
      */
     public function index()
     {
-        $publicacion = Publicacion::all();
+        $publicacion = Publicacion::with('categoria', 'empresa')->paginate();
         return response()->json($publicacion, 200);
     }
 

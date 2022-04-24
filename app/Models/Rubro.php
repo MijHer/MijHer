@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Rubro extends Model
 {
     use HasFactory;
+
+    public function empresas()
+    {
+        return $this->belongsToMany(Empresa::class);
+    }
 }
